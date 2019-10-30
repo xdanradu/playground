@@ -1,0 +1,106 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins/_breakpoints";
+
+
+
+$color: #ff00ff;
+$drawer-animation-duration: 2.3s;
+
+@keyframes headerText_open-close {
+  from {
+    margin-left:200px;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
+
+@keyframes headerText_close-open {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left:200px;
+  }
+}
+
+
+
+@import "assets/raiffeisen-pfp-iconset-01-15.css";
+
+@mixin center-block($bg-color) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $bg-color;
+}
+
+
+html,
+body {
+  background-color: papayawhip;
+  font-family: sans-serif;
+
+  .header-text {
+    background-color: tomato;
+    width:50px;
+  }
+
+  .my {
+    @include center-block($color);
+  }
+  
+}
+
+@mixin none-view{
+  .custom-class {
+    display: none;
+  }
+}
+
+@mixin mobile-view{
+  .custom-class {
+    background-color: white;
+    display: block;
+    .header-text {
+      color:yellow;
+      animation-name: headerText_close-open;
+      animation-duration: $drawer-animation-duration;
+      margin-left:200px;
+    }
+
+  }
+}
+
+@mixin desktop-view{
+  .custom-class {
+    background-color: red;
+    display: block;
+    .header-text {
+      color:white;
+      animation-name: headerText_open-close;
+      animation-duration: $drawer-animation-duration;
+      margin-left:0px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xs) {
+  @include none-view;
+}
+@include media-breakpoint-up(sm) {
+  @include mobile-view;
+}
+@include media-breakpoint-up(md) {
+  @include desktop-view;
+}
+@include media-breakpoint-up(lg) {
+  @include desktop-view;
+}
+@include media-breakpoint-up(xl) {
+  @include desktop-view;
+}
+
+
+
