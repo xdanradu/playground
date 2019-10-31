@@ -17,7 +17,7 @@ class Counter extends React.Component {
     const { fixSearch } = this.state
     const node = this.myRef.current;
     // console.log('Scroll event detected! '+node.scrollTop);
-    if (node.scrollTop > 20) {
+    if (node.scrollTop > 100) {
       console.log('true');
       this.setState({
         fixSearch: true
