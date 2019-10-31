@@ -7,20 +7,26 @@ import "./styles.scss";
 
 const App = () => (
   <div class="custom-class">
-    <div class="header-text">Hello</div>
-    <div className="col-6 bg-light mx-auto text-center">
-      <div
-        aria-hidden="false"
-        aria-label="Logout"
-        class="library-raiffeisen-pfp-iconset-01-15"
-      >
-        <i class="icon-logout" />
-      </div>
-      <button className="btn btn-dark">Click</button>
-    </div>
 
-    <button class="my">My</button>
+<p>Click on the Menu Icon to transform it to "X":</p>
+<div className="container" onClick="myFunction(this)">
+  <div className="bar1"></div>
+  <div className="bar2"></div>
+  <div className="bar3"></div>
+</div>
+
+    <div className="header-text">Hello</div>
+
+
+
+      <button className="my btn btn-dark">Click</button>
+
   </div>
 );
 
 render(<App />, document.getElementById("app"));
+
+function myFunction(x) {
+  console.log('works');
+  x.classList.toggle("change");
+}
