@@ -1,0 +1,23 @@
+body {
+    h1 {
+        color:white;
+        background-color:#0050fc;
+        width:300px;
+        text-align: center;
+
+        .title {
+            padding:7px;
+        }
+
+        &:hover {
+            background-color: #2964e4;
+            cursor:pointer;
+            
+        }
+
+        .separator {
+            border:3px solid #ff9b82;
+            display:block;
+        }
+    }
+}
