@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './src/app.js'
+// import Main from './src/app.js'
+import Deepmerge from './src/deepmerge.js'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Deepmerge />, document.getElementById('root'))
