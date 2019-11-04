@@ -1,4 +1,4 @@
-$animation-duration: 4s;
+$animation-duration: 3s;
 $body-color: #262626;
 $primary-color: #2196f3;
 $tank-bg-color: #0a84e9;
@@ -9,7 +9,6 @@ body {
     margin-top:10%;
     text-align: center;
     background: $body-color;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     .tank-container {
         right:0;
@@ -53,12 +52,11 @@ body {
         }
 
         .close {
-            background-color: #ff6b66;
+            background-color: $body-color;
         }
 
         .open {
             background-color: $tank-bg-color;
-            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(124,189,243,1) 5%, rgba(10,132,233,1) 50%, rgba(128,191,244,1) 95%, rgba(255,255,255,1) 100%);
         }
 
 
@@ -86,35 +84,6 @@ body {
                 height:0px;
             }
         }
-
-        .max-level {
-            position: absolute;
-            right: 0;
-            color: white;
-            margin-right: -60px;
-            z-index:9999;
-            span {
-                font-size:30px;
-                vertical-align: -3px;
-                margin-right: 12px;
-            }
-        }
-
-        .min-level {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            color: white;
-            margin-right: -60px;
-            z-index:9999;
-            span {
-                font-size:30px;
-                vertical-align: -3px;
-                margin-right: 16px;
-            }
-        }
-
-
     }
 
     .ripple {
