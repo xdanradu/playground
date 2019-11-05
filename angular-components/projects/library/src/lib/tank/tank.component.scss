@@ -1,0 +1,173 @@
+$animation-duration: 4s;
+$body-color: #262626;
+$primary-color: #2196f3;
+$tank-bg-color: #0a84e9;
+$tank-hover-color: #3aafff;
+$tank-border-color: #333;
+
+:host {
+    .container {
+        padding:50px;
+        text-align: center;
+        background: $body-color;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+        .tank-container {
+            right:0;
+            left:0;
+            margin: auto;
+            width: 200px;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            position: relative;
+            padding:5px;
+          
+            height: 350px;
+            border: 7px solid $tank-border-color;
+            border-top:0px solid white;
+            border-bottom-left-radius: 17px;
+            border-bottom-right-radius: 17px;
+            border-top-right-radius: 7px;
+            border-top-left-radius: 7px;
+            box-shadow: 0 0 4px 6px #fff, 0 20px 35px rgba(0,0,0,.1);
+    
+            .in {
+                margin: auto;
+                width:20px;
+                height:20px;
+                margin-top: -20px;
+                border-left: 6px solid white;
+                border-right: 6px solid white;
+            }
+    
+            .out {
+                margin: auto;
+                position: absolute;
+                bottom: 0;
+                left:88px;
+                margin-bottom: -20px;
+                width:20px;
+                height:20px;
+                margin-top: -20px;
+                border-left: 6px solid white;
+                border-right: 6px solid white;
+            }
+    
+            .close {
+                background-color: #ff6b66;
+            }
+    
+            .open {
+                background-color: $tank-bg-color;
+                background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(124,189,243,1) 5%, rgba(10,132,233,1) 50%, rgba(128,191,244,1) 95%, rgba(255,255,255,1) 100%);
+            }
+    
+    
+            .tank {
+                width: 210px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                border-bottom-left-radius: 17px;
+                border-bottom-right-radius: 17px;
+                background: $tank-bg-color;
+    
+                &:hover{
+                    cursor: pointer;
+                    animation-play-state: paused;
+                }
+                &.fill-tank {
+                    animation-name: fill;
+                    animation-duration: $animation-duration;
+                    height:355px;
+                }
+                &.unfill-tank {
+                    animation-name: unfill;
+                    animation-duration: $animation-duration;
+                    height:0px;
+                }
+            }
+    
+            .max-level {
+                position: absolute;
+                right: 0;
+                color: white;
+                margin-right: -60px;
+                z-index:9999;
+                span {
+                    font-size:30px;
+                    vertical-align: -3px;
+                    margin-right: 12px;
+                }
+            }
+    
+            .min-level {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: white;
+                margin-right: -60px;
+                z-index:9999;
+                span {
+                    font-size:30px;
+                    vertical-align: -3px;
+                    margin-right: 16px;
+                }
+            }
+    
+    
+        }
+    
+        .ripple {
+            border: none;
+            border-radius: 2px;
+            padding: 12px 18px;
+            font-size: 16px;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: white;
+            background-color: $primary-color;
+            box-shadow: 0 0 4px #999;
+            outline: none;
+            padding:15px;
+            margin:20px;
+            width:220px;
+        
+            background-position: center;
+            transition: background 0.8s;
+        
+            &:hover {
+                background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+            }
+    
+            &:active {
+                background-color: #6eb9f7;
+                background-size: 100%;
+                transition: background 0s;
+            }
+        }
+    
+        
+    }
+
+
+}
+
+@keyframes fill {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 355px;
+    }
+}
+  
+@keyframes unfill {
+    from {
+        height: 355px;
+    }
+    to {
+        height:0px;
+    }
+}
+

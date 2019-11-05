@@ -8,6 +8,10 @@ const routes: Routes = [
       {
         path: 'message',
         loadChildren: './message/message.page.module#MessagePageModule'
+      },
+      {
+        path: 'tank',
+        loadChildren: './tank/tank.page.module#TankPageModule'
       }
     ]
   },

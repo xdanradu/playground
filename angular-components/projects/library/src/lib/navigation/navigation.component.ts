@@ -9,6 +9,7 @@ import {RouterLink} from '@angular/router';
 export class NavigationComponent implements OnInit {
 
   link = 'pages/message';
+  linkTank = 'pages/tank';
 
   constructor() { }
 

@@ -6,9 +6,13 @@ export * from './text-message/text-message.module';
 import {NavigationModule} from './navigation/navigation.module';
 export * from './navigation/navigation.module';
 
+import {TankModule} from './tank/tank.module';
+export * from './navigation/navigation.module';
+
 const MODULES = [
   NavigationModule,
-  TextMessageModule
+  TextMessageModule,
+  TankModule
 ];
 
 @NgModule({
