@@ -1,0 +1,20 @@
+$primary-color: bisque; 
+$secondary-color: #eb7e26;
+
+:host {
+    div {
+        background-color: $primary-color;
+        padding: 20px;
+        margin: 20px;
+        font: {
+            size: 20px;
+            family: Verdana, Geneva, Tahoma, sans-serif; 
+        }
+        span {
+            margin-top:10px;
+            display: block;
+            border:2px solid $secondary-color;
+        }
+    }
+}
+  
