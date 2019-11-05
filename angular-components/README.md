@@ -30,3 +30,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # Library distribution
 `npm run build-lib`
 `npm run pack`
+
+http://localhost:4201/demo/pages/message

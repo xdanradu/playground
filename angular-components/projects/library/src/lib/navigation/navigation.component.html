@@ -1,0 +1,8 @@
+<span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; open</span>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a [routerLink]="link">Text message</a>
+    <a href="#">Form</a>
+</div>
+
+<ng-content></ng-content>

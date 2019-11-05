@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '', component: PagesComponent, children: [
       {
-        path: 'text',
+        path: 'message',
         loadChildren: './message/message.page.module#MessagePageModule'
       }
     ]

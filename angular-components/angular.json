@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref":"/demo/",
             "outputPath": "dist/angular-components",
             "index": "src/index.html",
             "main": "src/main.ts",
