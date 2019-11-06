@@ -3,7 +3,10 @@
         float:left;
         input {
             padding:11px;  
-            border:1px solid #dedede;  
+            border-bottom:1px solid #dedede;  
+            border-left:1px solid #dedede; 
+            border-right:0px;
+            border-top:1px solid #dedede; 
         }
     }
     .color-panel {
