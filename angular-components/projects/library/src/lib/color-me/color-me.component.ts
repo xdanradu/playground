@@ -11,6 +11,7 @@ export class ColorMeComponent {
     keyup() {
         const val = (<HTMLInputElement>document.getElementById('in')).value;
         document.getElementById('in').style.borderColor = val;
+        document.getElementById('in').style.color = val;
     }
 
     blur() {
@@ -20,5 +21,6 @@ export class ColorMeComponent {
     focus() {
         const val = (<HTMLInputElement>document.getElementById('in')).value;
         document.getElementById('in').style.borderColor = val;
+        document.getElementById('in').style.color = val;
     }
 }
