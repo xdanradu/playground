@@ -1,0 +1,20 @@
+<div> 
+    <h4>Type a color(ex: red, green, yellow, #ff00ff, rgba(255,255,0))</h4>
+    <div class="color-input">
+        <input 
+            id="in" 
+            type="text" 
+            #input 
+            (focus)="focus()" 
+            (blur)="blur()" 
+            (keyup)="keyup()" 
+            [value]="color"
+        >
+    </div>
+    <div 
+        class='color-panel' 
+        [style.background]="input.value"
+    >
+    </div>
+    
+</div>
